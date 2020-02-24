@@ -279,19 +279,19 @@ ul {
 }
 
 #one{
-	background-image:url("images/one.jpg");
-	background-position: right;
+  background-image:url("images/one.jpg");
+  background-position: right;
 
 }
 
 #two{
-	background-image:url("images/two.jpg");
-	background-position: right;
+  background-image:url("images/two.jpg");
+  background-position: right;
 }
 
 #three{
-	background-image:url("images/three.jpg");
-	background-position: center;
+  background-image:url("images/three.jpg");
+  background-position: center;
 }
 .card-container a {
   padding: 10px 10px 10px 10px;
