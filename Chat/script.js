@@ -203,7 +203,7 @@
   //Semi Real Time 
   time=setInterval(function(){
     getData();
-  },0010);
+  },0500);
   
   searchFilter.init();
   
