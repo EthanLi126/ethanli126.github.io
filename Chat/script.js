@@ -1,6 +1,8 @@
 (function(){
 
   window.addEventListener('offline', function(e) { alert('Sorry, but there is no internet connection. Please connect to the internet and try again.'); });
+  //custom spam stopper :>
+  var spam_counter;
 
   //firebase code
   var config = {
@@ -104,6 +106,7 @@
 
         //goto html
         this.$chatHistoryList.append(template(context));
+        spam_counter = spam_counter + 1;
         this.scrollToBottom();
         sendMessage(time);
         this.$textarea.val('');
@@ -203,6 +206,10 @@
   //Semi Real Time 
   time=setInterval(function(){
     getData();
+    if(spam_counter >= 2){
+      alert("Calm Down! Every message you send costs money you know. Please be considerate for us poor developers.")
+    }
+    spam_counter = 0;
   },0500);
   
   searchFilter.init();
