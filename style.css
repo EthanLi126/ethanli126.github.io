@@ -278,9 +278,11 @@ ul {
   transition: all .2s ease-in-out;
 }
 
+
 #one{
   background-image:url("images/one.jpg");
   background-position: right;
+
 
 }
 
@@ -293,19 +295,50 @@ ul {
   background-image:url("images/three.jpg");
   background-position: center;
 }
-.card-container a {
+.card-container .preview {
+  visibility: visible;
   padding: 15px 15px 15px 15px;
+  width: 350px;
   font-size: 17px;
   color: white;
   display: block;
   background-color: rgba(0, 0, 0, .5);
   text-align: center;
+  position:absolute;             
+  bottom:0;
+
 
 }
+.card-container .popup{
+  visibility: hidden;
+  padding: 15px 15px 15px 15px;
+  width: 350px;
+  font-size: 17px;
+  color: white;
+  display: block;
+  background-color: rgba(0, 0, 0, .5);
+  text-align: center;
+  position:absolute;             
+  bottom:0;
+  line-height: 1.6em
+
+}
+
+
+
 
 .card-container:hover {
   transform: scale(1.1);
 }
+
+.card-container:hover .preview {
+  visibility: hidden;
+}
+
+.card-container:hover .popup{
+  visibility: visible;
+}
+
 
 
 /*features container*/
