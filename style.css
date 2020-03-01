@@ -379,7 +379,7 @@ ul {
 /*footer*/
 .foot {
   position:relative;
-  top:-50px;
+  top:-20px;
   height: 75px;
   background-color: #080400;
   border-top:1px solid orange;
