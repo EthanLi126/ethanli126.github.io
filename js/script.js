@@ -1,3 +1,37 @@
+const type = string => {
+    document.getElementById("dynam").innerHTML = '';
+    var i = 0;
+    var txt = string;
+    var chatWindow = document.getElementById("dynam");
+    if (i < txt.length) {
+        setInterval(function(){
+          if (i < txt.length) {
+            chatWindow.innerHTML += txt.charAt(i);
+            i++;
+          }
+        }, 55);
+      }
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, 1000* ms));
+}
+
+async function hi(){
+  var i = false;
+  while(i==false){
+    type('Organization.');
+    await sleep(3);
+    type('Productivity.');
+    await sleep(3);
+    type('Accountability.');
+    await sleep(3);
+    type('Lifestyle.');
+    await sleep(3);
+  }
+}
+hi()
+
 
 window.onscroll = function() {scrollFunction()};
 
@@ -28,3 +62,5 @@ function showPage() {
   document.getElementById("navbar").style.display = "initial";
   document.getElementById("maindiv").style.display = "initial";
 }
+
+
