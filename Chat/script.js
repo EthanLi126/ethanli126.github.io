@@ -1,5 +1,4 @@
 (function(){
-  window.addEventListener(user==null, function(e) { alert('Sorry, but theaaaaaaa connection. Please connect to the internet and try again.'); });
   window.addEventListener('offline', function(e) { alert('Sorry, but there is no internet connection. Please connect to the internet and try again.'); });
   //custom spam stopper :>
 
