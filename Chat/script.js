@@ -208,7 +208,7 @@
   //Semi Real Time 
   time=setInterval(function(){
     getData();
-    if(spam_counter >= 1){
+    if(spam_counter >= 2){
       alert("Calm Down! Every message you send costs money you know. Please be considerate for us poor developers.")
     }
     spam_counter = 0;
