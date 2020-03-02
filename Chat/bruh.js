@@ -3,7 +3,6 @@
   window.addEventListener('offline', function(e) { alert('Sorry, but there is no internet connection. Please connect to the internet and try again.'); });
   //custom spam stopper :>
   var spam_counter;
-  var timeout;
 
   //firebase code
   var config = {
@@ -22,6 +21,7 @@
   // Check to see if you are logged in
   firebase.auth().onAuthStateChanged(function(user) {
     if (user == null) {
+      username = "Anonymous";
       setTimeout(signIn, 1);
       //alert('Please Sign In')
 
@@ -209,10 +209,8 @@
   //Semi Real Time 
   time=setInterval(function(){
     getData();
-    if(spam_counter >= 1){
-      timeout = 1;
+    if(spam_counter >= 2){
       alert("Calm Down! Every message you send costs money you know. Please be considerate for us poor developers.")
-      setTimeout(() => {}, 2000);
     }
     spam_counter = 0;
   },0500);
