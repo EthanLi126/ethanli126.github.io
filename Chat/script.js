@@ -3,6 +3,8 @@
   window.addEventListener('offline', function(e) { alert('Sorry, but there is no internet connection. Please connect to the internet and try again.'); });
   //custom spam stopper :>
   var spam_counter;
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
 
   //firebase code
   var config = {
@@ -205,15 +207,36 @@
     }
   }
 
-  //Semi Real Time 
+  //Popup modal and disable keyboard
   time=setInterval(function(){
     getData();
     if(spam_counter >= 2){
-      alert("Calm Down! Every message you send costs money you know. Please be considerate for us poor developers.")
+      modal.style.display = "block";
+      document.onkeydown = function (e) {
+              return false;
+      }
     }
     spam_counter = 0;
   },0500);
   
+  // When the user clicks on <span> (x), close the modal and re-enable keyboard
+  span.onclick = function() {
+    modal.style.display = "none";
+    document.onkeydown = function (e) {
+              return true;
+      }
+  }
+
+  // When the user clicks anywhere outside of the modal, close it and re-enable keybaord
+  // window.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     modal.style.display = "none";
+  //     document.onkeydown = function (e) {
+  //             return true;
+  //     }
+  //   }
+  // }
+
   searchFilter.init();
   
 })();
