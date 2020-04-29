@@ -1,0 +1,247 @@
+* {box-sizing: border-box;}
+
+html{
+  overflow-x: hidden;
+}
+body, html {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*loader*/
+#l-back {
+  background: black;
+  width:100%;
+  height:100%;
+  margin:auto;
+
+}
+#loader {
+  background-image:url("images/a3a.jpg");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: 30%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 2.5s;
+  animation-name: animatebottom;
+  animation-duration: 2.5s
+}
+
+@-webkit-keyframes animatebottom {
+  from {opacity:0; } 
+  to { opacity:1; }
+}
+
+@keyframes animatebottom { 
+  from{opacity:0; } 
+  to{opacity:1; }
+}
+
+#maindiv{
+  display:none;
+}
+
+
+/*menubutton*/
+
+.mcontainer {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 6px;
+  margin-left:89.8%;
+}
+
+.bar1, .bar2{
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0px;
+
+
+  
+}
+
+
+
+.change .bar1 {
+  animation-duration: 1s;
+  animation-name: change1;
+  animation-fill-mode: both;
+  
+  
+
+
+}
+@keyframes change1 {
+  from {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, 6px);
+    
+  }
+
+  to {
+    transform: rotate(-45deg) translate(-8px, 0px);
+    
+  }
+}
+ 
+
+
+
+.change .bar2 {
+  animation-duration: 1.2s;
+  animation-name: change2;
+  animation-fill-mode: both;
+  
+}
+
+@keyframes change2 {
+  from {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, -6px);
+    
+  }
+
+  to {
+    transform: rotate(45deg) translate(-8px, 0px);
+    
+  }
+}
+
+
+.changerev .bar1 {
+  animation-duration: 1s;
+  animation-name: changerev1;
+  animation-fill-mode: both;
+  
+  
+
+
+}
+@keyframes changerev1 {
+  from {
+    transform: rotate(-45deg) translate(-8px, 0px);
+
+  }
+
+  75% {
+    transform: translate(0px, 6px);
+    
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+}
+ 
+
+
+
+.changerev .bar2 {
+  animation-duration: 1.2s;
+  animation-name: changerev2;
+  animation-fill-mode: both;
+  
+}
+
+@keyframes changerev2 {
+  from {
+    transform: rotate(45deg) translate(-8px, 0px);
+
+  }
+
+  75% {
+    transform: translate(0px, -6px);
+    
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 2.5s;
+  animation-name: animatebottom;
+  animation-duration: 2.5s
+}
+
+@-webkit-keyframes animatebottom {
+  from {opacity:0; } 
+  to { opacity:1; }
+}
+
+@keyframes animatebottom { 
+  from{opacity:0; } 
+  to{opacity:1; }
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: none;
+  border-color: white;
+  border-style: none none solid none;
+  border-width: 1px;
+  height: 45px;
+  position: fixed;
+  top: 1%;
+  width: 90%;
+  display:none;
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
