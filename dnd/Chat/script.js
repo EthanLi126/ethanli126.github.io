@@ -210,7 +210,7 @@
   //Popup modal and disable keyboard
   time=setInterval(function(){
     getData();
-    if(spam_counter >= 2){
+    if(spam_counter >= 1.5){
       modal.style.display = "block";
       document.onkeydown = function (e) {
               return false;
