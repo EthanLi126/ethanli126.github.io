@@ -76,7 +76,11 @@ body, html {
   display: inline-block;
   cursor: pointer;
   padding-top: 6px;
-  margin-left:89.8%;
+  z-index: 2;
+
+
+
+
 }
 
 .bar1, .bar2{
@@ -84,6 +88,7 @@ body, html {
   height: 1px;
   background-color: white;
   margin: 10px 0px;
+  z-index: 2;
 
 
   
@@ -230,6 +235,7 @@ body, html {
   display:none;
   margin-left: 5%;
   margin-right: 5%;
+  z-index: 2;
 
 
 }
@@ -237,11 +243,67 @@ body, html {
 #navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: left;
   padding: 14px 0px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
 }
+
+.leftc {
+  text-align:right;
+  z-index: 2;
+}
+
+/*Menu*/
+
+.overlay {
+  height: 0%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(7, 7, 7);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay2 {
+  height: 0%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(7,7,7);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+
 
 
