@@ -1,5 +1,9 @@
 
-var xy = document.getElementsByClassName('fg-slider');
+var x = document.getElementsByClassName('fg-slider','maintext');
+var y = document.getElementsByClassName('maintext');
+var z = document.getElementsByClassName('shadowtext');
+var a = document.getElementsByClassName('prompt');
+var b = document.getElementsByClassName('arrow');
 setTimeout(function() {
   document.getElementById("l-back").style.display = "none";
   document.getElementById("loader").style.display = "none";
@@ -7,11 +11,19 @@ setTimeout(function() {
   document.getElementById("navbar").style.width = "90%";
   document.getElementById("leftc").style.opacity = "1";
 
-  for (var i = 0; i < xy.length; i++) {
-  xy[i].classList.remove('is-visible');}
+  for (var i = 0; i < x.length; i++) {
+  x[i].classList.remove('is-visible');}
+  for (var i = 0; i < y.length; i++) {
+  y[i].classList.remove('is-visible');}
+  for (var i = 0; i < z.length; i++) {
+  z[i].classList.remove('is-visible');}
+  for (var i = 0; i < a.length; i++) {
+  a[i].classList.remove('is-visible');}
+  for (var i = 0; i < b.length; i++) {
+  b[i].classList.remove('is-visible');}
 
 
-}, 500);
+}, 1500);
 
 function menu(x) {
   if (x.classList.contains("change")) {
