@@ -2,8 +2,6 @@
 
 html{
   overflow-x: hidden;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
 
 }
@@ -309,7 +307,7 @@ body, html {
 
 .overlay-content {
   position: relative;
-  top: 35%;
+  top: 30%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -320,7 +318,7 @@ body, html {
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 50px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -341,6 +339,7 @@ body, html {
   overflow-y: hidden;
   transition: 0.5s;
 }
+
 
 
 /*maintext*/
@@ -493,6 +492,7 @@ body, html {
 }
 
 .bwheel{
+  cursor: pointer;
   z-index: 6;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -517,6 +517,7 @@ body, html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 
 /*slidehshow*/
 

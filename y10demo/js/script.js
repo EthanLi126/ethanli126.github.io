@@ -1,7 +1,8 @@
+var y = document.getElementsByClassName('maintext');
+var z = document.getElementsByClassName('shadowtext');
+
 window.onload = function() {
-    var x = document.getElementsByClassName('fg-slider','maintext');
-    var y = document.getElementsByClassName('maintext');
-    var z = document.getElementsByClassName('shadowtext');
+    var x = document.getElementsByClassName('fg-slider');
     var a = document.getElementsByClassName('prompt');
     var b = document.getElementsByClassName('arrow');
     setTimeout(function() {
@@ -39,6 +40,10 @@ function menu(x) {
     x.classList.add("change");
     document.getElementById("menu").style.height = "100%";
     document.getElementById("menu2").style.height = "100%";
+    for (var i = 0; i < y.length; i++) {
+    y[i].classList.remove('is-visible');}
+    for (var i = 0; i < z.length; i++) {
+    z[i].classList.remove('is-visible');}
   }
 
 }
@@ -52,7 +57,11 @@ function menu(x) {
 // }
 
 
-
+function move() {
+    var bw=document.getElementsByClassName('bwheel');
+    for (var i = 0; i < bw.length; i++) {
+    bw[i].classList.add('click');}
+}
 
 
 

@@ -1,0 +1,408 @@
+html{
+
+  overflow-x: hidden;
+
+}
+body, html {
+  background-color: black;
+  height: 100%;
+  margin: 0;
+  font-family: Neutrif-Pro, sans-serif;
+
+}
+
+@font-face {
+    font-family: Neutrif-Pro;
+    src: url("fonts/NeutrifProLight.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Neutrif-Pro;
+    src: url("fonts/NeutrifProRegular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: Neutrif-Pro;
+    src: url("fonts/NeutrifProMedium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Neutrif-Pro;
+    src: url("fonts/NeutrifProSemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: Neutrif-Pro;
+    src: url("fonts/NeutrifProBold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+/*loader*/
+#l-back {
+  background: black;
+  width:100%;
+  height:100%;
+  margin:auto;
+
+}
+#loader {
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: 35%;
+  z-index: 1;
+  margin: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#maindiv{
+  display:none;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 2.5s;
+  animation-name: animatebottom;
+  animation-duration: 2.5s
+}
+
+@-webkit-keyframes animatebottom {
+  from {opacity:0; } 
+  to { opacity:1; }
+}
+
+@keyframes animatebottom { 
+  from{opacity:0; } 
+  to{opacity:1; }
+}
+
+/*menubutton*/
+
+.mcontainer {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 6px;
+  z-index: 2;
+
+
+
+
+}
+
+.bar1, .bar2{
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0px;
+  z-index: 2;
+
+
+  
+}
+
+
+
+.change .bar1 {
+  animation-duration: 1s;
+  animation-name: change1;
+  animation-fill-mode: both;
+  
+  
+
+
+}
+@keyframes change1 {
+  from {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, 6px);
+    
+  }
+
+  to {
+    transform: rotate(-45deg) translate(-8px, 0px);
+    
+  }
+}
+ 
+
+
+
+.change .bar2 {
+  animation-duration: 1.2s;
+  animation-name: change2;
+  animation-fill-mode: both;
+  
+}
+
+@keyframes change2 {
+  from {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, -6px);
+    
+  }
+
+  to {
+    transform: rotate(45deg) translate(-8px, 0px);
+    
+  }
+}
+
+
+.changerev .bar1 {
+  animation-duration: 1s;
+  animation-name: changerev1;
+  animation-fill-mode: both;
+  
+  
+
+
+}
+@keyframes changerev1 {
+  from {
+    transform: rotate(-45deg) translate(-8px, 0px);
+
+  }
+
+  75% {
+    transform: translate(0px, 6px);
+    
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+}
+ 
+
+
+
+.changerev .bar2 {
+  animation-duration: 1.2s;
+  animation-name: changerev2;
+  animation-fill-mode: both;
+  
+}
+
+@keyframes changerev2 {
+  from {
+    transform: rotate(45deg) translate(-8px, 0px);
+
+  }
+
+  75% {
+    transform: translate(0px, -6px);
+    
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 2.5s;
+  animation-name: animatebottom;
+  animation-duration: 2.5s
+}
+
+@-webkit-keyframes animatebottom {
+  from {opacity:0; } 
+  to { opacity:1; }
+}
+
+@keyframes animatebottom { 
+  from{opacity:0; } 
+  to{opacity:1; }
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: none;
+  border-color: white;
+  border-style: none none solid none;
+  border-width: 1px;
+  height: 45px;
+  position: fixed;
+  top: 1%;
+  width: 0%;
+  display:initial;
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: 8;
+  transition: 0.5s;
+
+
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#leftc {
+  text-align:right;
+  z-index: 8;
+  opacity:0;
+  transition: 2s;
+}
+
+/*Menu*/
+
+.overlay {
+  height: 0%;
+  width: 50%;
+  position: fixed;
+  z-index:7;
+  top: 0;
+  right: 0;
+  background-color: rgb(7, 7, 7);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay2 {
+  height: 0%;
+  width: 50%;
+  position: fixed;
+  z-index: 7;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(7,7,7);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+/*maintext*/
+.maintext {
+  color: white;
+  font-size: 100px;
+  font-weight:700;
+  margin-top: 100px;
+  text-align: center;
+  z-index:5;
+  position: relative;
+  opacity:0;
+  transform: translateX(-100px);
+  transition: opacity 2s 0.5s cubic-bezier(0.19, 1, 0.21, 1),transform 2s 0.5s cubic-bezier(0.19, 1, 0.21, 1); 
+  will-change: transform, opacity;
+
+}
+
+.maintext.is-visible {
+  transform: translateX(0px);
+  opacity:1;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  margin:1%;
+  width:23%;
+  transition: 0.5s;
+}
+
+
+.row {
+  margin-left:5%;
+  margin-right:5%;
+  width:0%;
+  opacity: 0;
+  transition: 2s;
+}
+
+.row.is-visible {
+  width:90%;
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  body {  overflow-y: scroll;}
+}
+
+/* Style the counter cards */
+.card {
+  background-size: 275px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 16px;
+  text-align: center;
+  background-color: black;
+  height: 250px;
+
+}
+
