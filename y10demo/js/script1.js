@@ -42,3 +42,14 @@ function menu(x) {
   }
 
 }
+
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.width = "0%";
+    x[i].style.opacity = "0";
+  }
+  document.getElementById(tabName).style.width = "50%";
+  document.getElementById(tabName).style.opacity = "1";
+}
