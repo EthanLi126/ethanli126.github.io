@@ -452,6 +452,7 @@ body, html {
   background-position: center;
 }
 .brand {
+  cursor: pointer;
   color: white;
   font-size: 100px;
   font-weight:600;
@@ -472,6 +473,7 @@ body, html {
 }
 
 .bshadow {
+  cursor: pointer;
   color: rgb(14,14,14);
   font-size: 150px;
   font-weight:700;

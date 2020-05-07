@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden">
+<head>
+	<title>Impul</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/longchamps.png">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<script src="js/script1.js"></script>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="l-back">
+    <div style="background-image:url(images/impul.png);" id="loader"> </div>
+</div>
+
+<!-- Navbar -->
+<div id="navbar" class="animate-bottom">
+  <a href="index.html">Smol Wheels</a>
+  <div id = "leftc">
+    <div class="mcontainer" onclick="menu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+    </div>
+   </div> 
+</div>
+
+<!-- Menu -->
+<div id="menu" class="overlay">
+  <div class="overlay-content">
+    <a href="#">Search </a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+<div id="menu2" class="overlay2">
+  <div class="overlay-content">
+  </div>
+</div>
+
+<div id="maindiv">
+	<div class="maintext show-on-scroll">Impul</div>
+
+	<div class="row show-on-scroll">
+	  <div class="column"onclick="openTab('b1');">
+	    <div class="card" style="background-image: url(images/impul/d014h.jpg)">
+	    </div>
+	  </div>
+
+	  <div class="column"onclick="openTab('b2');">
+	    <div class="card"style="background-image: url(images/impul/d015h.jpg)">
+	    </div>
+	  </div>
+	  
+	  <div class="column"onclick="openTab('b3');">
+	    <div class="card"style="background-image: url(images/impul/d01sil4h.jpg)">
+	    </div>
+	  </div>
+	  
+	  <div class="column"onclick="openTab('b4');">
+	    <div class="card"style="background-image: url(images/impul/d01sil5h.jpg">
+	    </div>
+	  </div>
+	</div>
+
+  <div id="b1" class="containerTab">
+    <span onclick="this.parentElement.style.width='0%';this.parentElement.style.opacity='0';" class="closebtn">&times;</span>
+    <h2>Impul D-01 4H</h2>
+    <div class="tabImage"style="background-image: url(images/impul/d014h.jpg)"></div>
+    <table>
+      <tr>
+        <td>Production Years:</td>
+        <td>1980-1982</td>
+
+      </tr>
+      <tr>
+        <td>Wheel Diameters (Inches):</td>
+        <td>13, 14</td>
+
+      </tr>
+      <tr>
+        <td>Construction:</td>
+        <td>3-Piece</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="b2" class="containerTab">
+    <span onclick="this.parentElement.style.width='0%';this.parentElement.style.opacity='0';" class="closebtn">&times;</span>
+    <h2>Impul D-01 5H</h2>
+    <div class="tabImage"style="background-image: url(images/impul/d015h.jpg)"></div>
+    <table>
+      <tr>
+        <td>Production Years:</td>
+        <td>1980-1982</td>
+
+      </tr>
+      <tr>
+        <td>Wheel Diameters (Inches):</td>
+        <td>14</td>
+
+      </tr>
+      <tr>
+        <td>Construction:</td>
+        <td>3-Piece</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="b3" class="containerTab">
+    <span onclick="this.parentElement.style.width='0%';this.parentElement.style.opacity='0';" class="closebtn">&times;</span>
+    <h2>Impul D-01 Silhouette 4H</h2>
+    <div class="tabImage"style="background-image: url(images/impul/d01sil4h.jpg)"></div>
+    <table>
+      <tr>
+        <td>Production Years:</td>
+        <td>1981-1983</td>
+
+      </tr>
+      <tr>
+        <td>Wheel Diameters (Inches):</td>
+        <td>13, 14, 15, 16</td>
+
+      </tr>
+      <tr>
+        <td>Construction:</td>
+        <td>3-Piece</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="b4" class="containerTab">
+    <span onclick="this.parentElement.style.width='0%';this.parentElement.style.opacity='0';" class="closebtn">&times;</span>
+    <h2>Impul D-01 Silhouette 5H</h2>
+    <div class="tabImage"style="background-image: url(images/impul/d01sil5h.jpg)"></div>
+    <table>
+      <tr>
+        <td>Production Years:</td>
+        <td>1981-1983</td>
+
+      </tr>
+      <tr>
+        <td>Wheel Diameters (Inches):</td>
+        <td>14, 15, 16</td>
+
+      </tr>
+      <tr>
+        <td>Construction:</td>
+        <td>3-Piece</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+<script>
+
+    // Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+</script>
+</body>
+</html>

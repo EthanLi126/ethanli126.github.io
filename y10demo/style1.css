@@ -339,7 +339,7 @@ body, html {
   color: white;
   font-size: 100px;
   font-weight:700;
-  margin-top: 100px;
+  margin-top: 70px;
   text-align: center;
   z-index:5;
   position: relative;
@@ -421,7 +421,7 @@ body, html {
   text-align: center;
   color: white;
   background-color: rgb(7,7,7);
-  transition: opacity 0.8s, width 0.8s;
+  transition: opacity 0.2s 0.2s ease-in-out, width 0.8s;
   height:100%;
   width: 0%;
   opacity: 0;
