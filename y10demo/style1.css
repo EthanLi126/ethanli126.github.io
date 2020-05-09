@@ -339,7 +339,8 @@ body, html {
   color: white;
   font-size: 100px;
   font-weight:700;
-  margin-top: 70px;
+  margin-top: 80px;
+  padding-bottom: 40px;
   text-align: center;
   z-index:5;
   position: relative;

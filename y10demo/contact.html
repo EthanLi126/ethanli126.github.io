@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>Contact</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/longchamps.png"/>
+    <script src="js/script.js"></script>
+
+
+</head>
+<body>
+
+<!-- Loader -->
+<div id="l-back">
+    <div style="background-image:url(images/a3a1.png);" id="loader"> </div>
+</div>
+
+<!-- Navbar -->
+<div id="navbar" class="animate-bottom">
+  <a href="index.html">Smol Wheels</a>
+  <div id = "leftc">
+    <div class="mcontainer" onclick="menu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+    </div>
+   </div> 
+</div>
+
+<!-- Menu -->
+<div id="menu" class="overlay">
+  <div class="overlay-content">
+    <a href="#">Search </a>
+    <a href="#">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+<div id="menu2" class="overlay2">
+  <div class="overlay-content">
+  </div>
+</div>
+
+<!-- Maindiv -->
+<div id="maindiv">
+ 
+  <div class="bcontainer">
+    <!-- Slideshow -->
+    <div class="fg-slider show-on-scroll" id="slider-1">
+        <img src="images/hero1.png" alt="">
+        <img src="images/hero2.png" alt="">
+        <img src="images/hero3.png" alt="">
+        <img src="images/hero4.jpg" alt="">
+        <img src="images/hero5.jpg" alt="">
+    </div>
+
+    <!-- Hero Text -->
+    <a style = "margin-left:28%; top:350px; font-size:50px;" href="mailto:smolwheelsllc@gmail.com" class="maintext show-on-scroll">smolwheelsllc@gmail.com</a>
+    </div>
+  </div>  
+
+
+
+
+
+
+</div>
+
+
+<script>
+    new FgSlider('slider-1', {
+        autoplay: true, // autoplay on / off
+        effect: 'slide', // fade, scale, slide, slide-top
+        duration: 6000, // duration till the next slide
+        bullets: false, // show / hide bullets
+    });
+
+
+
+    // Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+</script>
+</body>
+</html>
