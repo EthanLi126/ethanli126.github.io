@@ -30,13 +30,26 @@
 <!-- Menu -->
 <div id="menu" class="overlay">
   <div class="overlay-content">
-    <a href="#">Search </a>
+    <a style = "cursor:pointer;" onclick="openSearch()">Search </a>
     <a href="#">About</a>
     <a href="contact.html">Contact</a>
   </div>
 </div>
 <div id="menu2" class="overlay2">
   <div class="overlay-content">
+    <div id = "scontainer">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for brands.." title="Type in a brand" autocomplete="off">
+      <ul id="myUL">
+        <li><a href="advan.html">Advan</a></li>
+        <li><a href="courreges.html">Courrèges</a></li>
+        <li><a href="enkei.html">Enkei</a></li>
+        <li><a href="hayashi.html">Hayashi</a></li>
+        <li><a href="impul.html">Impul</a></li>
+        <li><a href="speedstar.html">Speedstar</a></li>
+        <li><a href="watanabe.html">Watanabe</a></li>
+        <li><a href="work.htmls">Work</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -58,7 +71,7 @@
     <div class="shadowtext show-on-scroll">Smol <br> Wheels </div>
 
     <!-- Scroll Prompt -->
-    <div class="prompt show-on-scroll">Scroll Down For Brands </div>
+    <div class="prompt show-on-scroll">Scroll Down or Use Arrow Keys For Brands</div>
     <div class="arrow show-on-scroll">
       <span></span> 
     </div>
@@ -69,6 +82,13 @@
     <div onclick="location.href='advan.html';" class="brand show-on-scroll">Advan</div>
     <div onclick="location.href='advan.html';" class="bshadow show-on-scroll">Advan</div>
     <div onclick="location.href='advan.html';" class="bwheel" style="background-image:url(images/advan.png)"> </div>
+  </div>
+
+  <!--Courreges-->
+  <div class="bcontainer" style="background-image:url();">
+    <div onclick="location.href='courreges.html';" class="brand show-on-scroll">Courrèges</div>
+    <div onclick="location.href='courreges.html';" class="bshadow show-on-scroll">Courrèges</div>
+    <div onclick="location.href='courreges.html';" class="bwheel" style="background-image:url(images/courreges.png)"> </div>
   </div>
 
   <!--Enkei-->

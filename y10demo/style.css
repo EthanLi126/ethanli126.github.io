@@ -322,6 +322,10 @@ body, html {
   color: #818181;
   display: block;
   transition: 0.3s;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -392,7 +396,7 @@ body, html {
   font-size: 20px;
   font-weight:200;
   margin-top: 50px;
-  margin-left:17%;
+  margin-left:12%;
   z-index:5;
   position: relative;
   opacity:0;
@@ -518,6 +522,59 @@ body, html {
 @keyframes spin1 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+
+/*search*/
+
+#scontainer {
+
+  width:0%;
+  opacity: 0;
+  text-align: center;
+  margin: auto;
+  margin-top:100px;
+  transition: 1s;
+
+}
+
+#myInput {
+/*  background-image: url('images/longchamps.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-size: 30px;*/
+  width: 100%;
+  font-size: 25px;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  text-decoration: none;
+  outline: none;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#myUL li a {
+
+  border: 0px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: none;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+
+}
+
+#myUL li a:hover:not(.header) {
+  color: grey;
 }
 
 
