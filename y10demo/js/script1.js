@@ -27,18 +27,26 @@ window.onload = function() {
 }
 
 
+var h = ["0%", "100%"]
+
 function menu(x) {
   if (x.classList.contains("change")) {
     x.classList.remove("change"); 
     x.classList.add("changerev");
-    document.getElementById("menu").style.height = "0%";
-    document.getElementById("menu2").style.height = "0%";
+    document.getElementById("menu").style.height = h[0];
+    document.getElementById("menu2").style.height = h[0];
+    document.getElementById("scontainer").style.width = h[0];
+    document.getElementById("scontainer").style.opacity = "0";
 
   } else {
     x.classList.remove("changerev");
     x.classList.add("change");
-    document.getElementById("menu").style.height = "100%";
-    document.getElementById("menu2").style.height = "100%";
+    document.getElementById("menu").style.height = h[1];
+    document.getElementById("menu2").style.height = h[1];
+    for (var i = 0; i < y.length; i++) {
+    y[i].classList.remove('is-visible');}
+    for (var i = 0; i < z.length; i++) {
+    z[i].classList.remove('is-visible');}
   }
 
 }
